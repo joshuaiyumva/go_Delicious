@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="js/scripts.js"></script>
     <script src="js/jquery-3.5.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,16 +18,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-bars"></i>Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-envelope"></i>Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -35,13 +43,245 @@
             </label>
         </div>
     </nav>
+    <nav class="cart">
+        <h3>List of orders: <span>0$</span></h3>
+        <ol id="listOfOrders">
+        </ol>
+        <a class="btnStyle btnStyle3 finishOrder">Make Order</a>
+    </nav>
     <section id="firstSec">
+        <div class="container">
+            <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
 
     </section>
+    <hr>
     <section id="secondSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                    <h1>Welcome to GoDelicious</h1>
+                    <span id="welcomeSec"
+                        style="color: chocolate;font-family: 'Dancing Script',cursive;font-size: 20px;"><em><span
+                                style="font-size: 30px;text-shadow: 2px 2px 2px #000000;color: #ffffff;">Day and
+                                Night
+                            </span> we accept
+                            all kinds of visitors at any time of
+                            the Day;
 
+                            and our Chefs will make sure you're satisfied</em></span>
+                    <br><br>
+                    <div class="offer">
+                        <p>We offer a warm, friendly atmosphere to share a good slice of pizza with family and
+                            friends
+                            at any time of the day enjoy every bite of every slice<br>
+                            in the comfort you deserve.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="card imgCard1" style="width: 15rem;">
+                        <img class="img-fluid" src="images/backgrounds/promo_img.jpg" class="card-img-top" alt="promo">
+                        <div class="card-body">
+                            <p class="card-text">
+                                a great height in atmosphere
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="card imgCard2" style="width: 15rem;">
+                        <img class="img-fluid" src="images/backgrounds/adult-blur-casual-close-up.jpg"
+                            class="card-img-top" alt="promo">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Come and take a bite!!!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
+    <hr>
     <section id="thirdSec">
+        <div class="body-content">
+
+            <!-- Pizza cart -->
+            <nav class="cartList">
+                <h3>Your orders are: <span>0$</span></h3>
+                <ol id="myOrders">
+                </ol>
+                <a class="btnStyle btnStyle3 finishOrder">Finish Order</a>
+            </nav>
+
+            <div class="recipe-menu">
+                <!-- Pizza One -->
+                <div class="recipe">
+                    <p class="name">Pepperoni</p>
+                    <img src="images/items/product-10.png">
+                    <a class="btnStyle3 btnStyle addToCart" id="addToCartPizzaOne">Make order</a>
+                    <p class="price"><span>15</span>$</p>
+                    <div id="checkPizzaOne" title="Pizza" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="listHeading">Toppings:</h3>
+                                <ul class="listOfTopping" id="recipe1">
+                                    <li><input type="checkbox" checked>Sesame Bun</li>
+                                    <li><input type="checkbox" checked>Ground Beef Patty</li>
+                                    <li><input type="checkbox" checked>Onion</li>
+                                    <li><input type="checkbox" checked>Pickle</li>
+                                    <li><input type="checkbox" checked>Lettuce Salad</li>
+                                </ul>
+                                <a class="btnStyle3 btnStyle addIngredient">Add Topping</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="listHeading">Crust:</h3>
+                                <ul class="listOfcrust" id="recipe1">
+                                    <li><input type="checkbox" checked>Sesame Bun</li>
+                                    <li><input type="checkbox" checked>Ground Beef Patty</li>
+                                    <li><input type="checkbox" checked>Onion</li>
+                                    <li><input type="checkbox" checked>Pickle</li>
+                                    <li><input type="checkbox" checked>Lettuce Salad</li>
+                                </ul>
+                                <a class="btnStyle3 btnStyle addIngredient">Add Crust</a>
+                            </div>
+
+                        </div>
+
+                        <a class="btnStyle listOver">Place order</a>
+                        <h4 class="totalDialog" id="totalDialog1">Total: <span>15</span>$</h4>
+                    </div>
+                </div>
+
+                <!-- Pizza Two -->
+                <div class="recipe">
+                    <p class="name">Mozallela</p>
+                    <img src="images/items/product-10.png">
+                    <a class="btnStyle3 btnStyle addToCart" id="addToCartMacaroni">Make order</a>
+                    <p class="price"><span>15</span>$</p>
+                    <div id="checkOrderMacaroni" title="Macaroni" style="display: none;">
+                        <h3 class="listHeading">List of Ingredients:</h3>
+                        <ul class="listOfIngredients" id="recipe2">
+                            <li><input type="checkbox" checked>Macaroni</li>
+                            <li><input type="checkbox" checked>Paprica</li>
+                            <li><input type="checkbox" checked>Tomato</li>
+                            <li><input type="checkbox" checked>Chease</li>
+                            <li><input type="checkbox" checked>Zucchini</li>
+                        </ul>
+                        <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                        <a class="btnStyle listOver">Done</a>
+                        <h4 class="totalDialog" id="totalDialog2">Total: <span>15</span>$</h4>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="recipe">
+                    <p class="name">Pizza</p>
+                    <img src="images/items/product-10.png">
+                    <a class="btnStyle3 btnStyle addToCart" id="addToCartPizza">Make order</a>
+                    <p class="price"><span>18</span>$</p>
+                    <div id="checkOrderPizza" title="Pizza" style="display: none;">
+                        <h3 class="listHeading">List of Ingredients:</h3>
+                        <ul class="listOfIngredients" id="recipe3">
+                            <li><input type="checkbox" checked>Tomato Sauce</li>
+                            <li><input type="checkbox" checked>Cheese</li>
+                            <li><input type="checkbox" checked>Peperoni</li>
+                            <li><input type="checkbox" checked>Olives</li>
+                            <li><input type="checkbox" checked>Mushrooms</li>
+                            <li><input type="checkbox" checked>Basil</li>
+                        </ul>
+                        <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                        <a class="btnStyle listOver">Done</a>
+                        <h4 class="totalDialog" id="totalDialog3">Total: <span>15</span>$</h4>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 
+                <div class="recipe">
+                    <p class="name">Salad</p>
+                    <img src="images/items/product-10.png">
+                    <a class="btnStyle3 btnStyle addToCart" id="addToCartSalad">Add to Cart</a>
+                    <p class="price"><span>9</span>$</p>
+                    <div id="checkOrderSalad" title="Salad">
+                        <h3 class="listHeading">List of Ingredients:</h3>
+                        <ul class="listOfIngredients" id="recipe4">
+                            <li><input type="checkbox" checked>Tomato</li>
+                            <li><input type="checkbox" checked>Cucumber</li>
+                            <li><input type="checkbox" checked>Cheese</li>
+                        </ul>
+                        <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                        <a class="btnStyle listOver">Done</a>
+                        <h4 class="totalDialog" id="totalDialog4">Total: <span>9</span>$</h4>
+                    </div>
+                </div>
+            </div>
+            -->
+            </div>
+            <!-- Comfirmation Message -->
+            <div id="finishOrderDialog" title="Confirm Order" style="display: none;">
+                <div id="finalOrderList">
+                    <h3>Your Orders:</h3>
+                    <ol></ol>
+                </div>
+                <div id="buyerInfo" style="display: none;">
+                    <input type="text" id="buyerName" placeholder="Enter Name">
+                    <input type="text" id="buyerNumber" placeholder="Enter Phone Number">
+                    <input type="text" id="buyerAddress" placeholder="Enter Address">
+                    <input type="text" id="buyerName" placeholder="Enter Name">
+                    <a class="btnStyle order">Order!</a>
+                </div>
+            </div>
+
+            <div id="thanksMessage" style="display: none;">
+                <h1>Thank you for the order</h1>
+                <h3>We will have it delivered soon</h3>
+            </div>
+    </section>
+    <hr>
+    <section id="forthSec">
 
     </section>
 </body>

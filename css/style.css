@@ -1,9 +1,44 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
+
+html{
+    background-color: #ffffff;
+}
+html,
+p {
+    font-family: 'Source Serif Pro',
+        serif;
+
 }
 
-html {
-    background-color: burlywood;
+::-webkit-scrollbar {
+    z-index: 100;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e6dfe2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar-button {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+input {
+    outline-color: #ff2f00;
 }
 
 .navbar {
@@ -11,8 +46,7 @@ html {
     width: 100%;
     position: fixed;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, .23);
     border-radius: 0px;
     padding: 0px 100px;
     display: flex;
@@ -21,16 +55,15 @@ html {
     box-sizing: border-box;
 }
 
-#navbarNav .navbar-nav .nav-link {
-    color: #ffffff;
-}
-
-#navbarNav .navbar-nav .nav-link:hover {
-    color: #f09630;
+section {
+    padding-top: 100px;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.24);
 }
 
 .btnStyle {
-    background-color: #f09630;
+    background-color: #f83d13;
     display: inline-block;
     text-decoration: none;
     font-size: 18px;
@@ -44,25 +77,22 @@ html {
 }
 
 .btnStyle:hover {
-    background-color: #926521;
+    background-color: #eed64d;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
     transform: scale(1.05, 1.05);
 }
 
-.btnStyle2 {
-    background-color: #cc7605;
-}
-
-.btnStyle2:hover {
-    background-color: #f18e78;
+#pepperoniPizza {
+    background-color: rgb(255, 187, 187);
 }
 
 .btnStyle3 {
-    background-color: #a7a40c;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btnStyle3:hover {
-    background-color: #F2D388;
+    background-color: #f05348;
+    color: #000;
 }
 
 .toggleCart {
@@ -71,13 +101,13 @@ html {
 
 .fa-circle {
     font-size: 21px !important;
-    color: #f7f0ef;
+    color: #000000;
 }
 
 .num {
     font-size: 12px;
     padding: 3px 6px;
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
 
 .num,
@@ -87,8 +117,9 @@ html {
     top: -9px;
 }
 
-.cartList {
-    width: 250px;
+.cart {
+    width: 200px;
+    height: 400px;
     position: fixed;
     top: 60px;
     bottom: 0px;
@@ -96,8 +127,9 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
     z-index: 1;
-    background-color: #ad830d;
+    background-color: #f19393;
     padding: 30px;
+    box-shadow: 2px 0 20px 5px rgba(0, 0, 0, 0.24);
     transition: all 0.25s ease-in-out;
 }
 
@@ -110,30 +142,27 @@ html {
     display: none;
 }
 
-#cartToggle:checked~div.body-content>.cart {
+#cartToggle:checked~div.menu-body>.cart {
     right: 0px;
 }
 
-#cartToggle:checked~div.body-content {
+#cartToggle:checked~div.menu-body {
     right: 100px;
 }
 
-#cartToggle:checked~div.body-content>.cart>a.finishOrder {
+#cartToggle:checked~div.menu-body>.cart>a.finishOrder {
     right: 5px;
 }
 
-.body-content {
+.menu-body {
     position: relative;
     right: 0px;
     width: 80%;
     margin: 0px auto;
     display: flex;
     justify-content: space-around;
-
     transition: all .2s ease-in-out;
 }
-
-/* orders */
 
 .recipe-menu {
     margin-top: 100px;
@@ -143,28 +172,30 @@ html {
 }
 
 .recipe {
+    background-color: #ffffff;
+    background-size: 100% 100%;
     padding: 10px;
     margin-bottom: 40px;
-    width: 20rem;
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
 .recipe img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 .name {
-    font-size: 20px;
+    font-size: 23px;
     text-align: center;
-    color: yellow;
 }
 
 .price {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     padding: 0px 15px;
-    color: white;
+    text-align: center;
 }
 
 .recipe:hover>.addToCart {
@@ -191,11 +222,7 @@ html {
     text-align: center;
     padding: 20px 0;
 }
-.listOfTopping{
-    list-style: none;
-    margin-bottom: 15px;
 
-}
 .listOfIngredients {
     list-style: none;
     margin-bottom: 15px;
@@ -221,7 +248,7 @@ html {
 }
 
 .cancelInput {
-    background-color: #B33232;
+    background-color: #c90404;
 }
 
 .orderName {
@@ -232,15 +259,19 @@ html {
     float: right;
 }
 
+hr {
+    margin: 25px 0 5px 0;
+}
+
 .delBtn {
     float: right;
-    color: #F2D388;
+    color: #f1ac0a;
     cursor: pointer;
 }
 
 .totalDialog {
     display: inline-block;
-    float: right;
+
 }
 
 .cart>h2>span {
@@ -326,7 +357,7 @@ html {
 }
 
 .ui-button {
-    background-color: #874C62;
+    background-color: #f12d2d;
     border: none;
     border-radius: 3px;
     padding: 3px 5px;
@@ -336,86 +367,130 @@ html {
 }
 
 .ui-button:hover {
-    background-color: #C98474;
+    background-color: #ff6744;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
     transform: scale(1.05, 1.05);
 }
 
-#firstSec,
-#secondSec,
-#forthSec {
+section#welcomeSec,
+#menuSec,
+#introSec,
+#aboutUsSec,
+#contactSec,
+#reservationSec,
+#footerSec {
     width: 100%;
-    height: 100vh;
-    background-color: #f2f2f2;
+    padding-bottom: 70px;
+    background-color: #ffffff;
 }
 
-#thirdSec {
-    background-image: url(../images/backgrounds/order.jpg);
-    height: fit-content;
+section#welcomeSec {
     width: 100%;
 }
 
-#orderColor {
-    background-color: rgba(0, 0, 0, 0.3);
-    align-content: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+#menuSec {
+    width: 100%;
+    
 }
+
+#aboutUsSec {
+    width: 100%;
+}
+
+#contactSec {
+    width: 100%;
+}
+
+#footerSec {
+    width: 100%;
+}
+
+hr.newLine {
+    margin-left: 15%;
+    width: 70%;
+    color: rgb(22, 22, 22);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
 
 h1 {
     font-family: 'Piedra',
         cursive;
 }
 
-p {
-    font-family: 'Special Elite',
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+h2 {
+    font-family: 'Lemonada',
         cursive;
 }
-
-hr {
-    width: 75%;
-    height: 5px;
-    border-width: 0;
-    color: gray;
-    background-color: gray
+.card1{
+    background-color: #ff1a1a;
 }
-
-div.order {
-    text-align: center;
+.card2{
+    background-color:#ffd11a;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
-p.order {
-
-    font-family: 'Satisfy',
-        cursive;
-    color: sienna;
-}
-
 .row .col-md-3 .card {
     background-color: transparent;
+    border-style: none;
 }
 
 .row .col-md-3 .card img {
-    align-content: center;
+    margin-left: 20px;
+
+}
+input#nameTxt {
+    width: 420px;
+    padding-left: 5px;
 }
 
-.row .col-md-3 .card .card-body {
+input#mailTxt {
+    width: 350px;
+    padding-left: 5px;
+}
+
+textarea#messageTxt {
+    width: 800px;
+    height: 150px;
+    padding-top: 15px;
+    overflow: auto;
+    position: relative;
+}
+
+input#nameTxt,
+input#mailTxt,
+textarea#messageTxt {
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 10px 15px 10px;
+    background: transparent;
+    border-bottom: solid 1px;
+    border-color: #000000;
+    color: #000000;
+    font-family: 'Libre Baskerville',
+        serif;
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1;
+    border: none;
+}
+
+#submitBtn {
+    margin-left: 35%;
+    border-radius: 10px;
+}
+
+#submitBtn:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 10px;
+
+}
+#menuBtn{
+    background-color: #ff1a1a;
     color: #ffffff;
-}
-
-.row .col-md-3 .card .btn {
-    border-radius: 30%;
-    color: #ffffff;
-    background-color: red;
-}
-
-.row .col-md-3 .card .btn:hover {
-    background-color: transparent;
-    border-color: white;
-}
-
-.row .col-md-3 .card .title {
-    color: yellow;
 }

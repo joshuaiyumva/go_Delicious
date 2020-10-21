@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://use.fontawesome.com/7488f3a572.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" id="cartToggle" name="toggle" />
+    <nav class="navbar">
+        <div>
+            <label for="cartToggle" class="toggleCart btnStyle btnStyle2"><i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span class="num"></span>
+            </label>
+        </div>
+    </nav><!-- End of Navigation -->
+    <!-- <section id="thirdSec"> -->
+    <div class="menu-body">
+        <!-- Cart -->
+        <nav class="cart">
+            <h3>List of orders: <span>0$</span></h3>
+            <ol id="listOfOrders">
+            </ol>
+            <a class="btnStyle btnStyle3 finishOrder">Finish Order</a>
+        </nav>
+
+        <div class="recipe-menu">
+
+            <!-- Recipe 1 -->
+            <div class="recipe">
+                <p class="name">Pepperoni</p>
+                <img src="images/items/p-1.png" width="200" height="200" />
+                <a class="btnStyle3 btnStyle addToCart" id="addToPepperoni">Add to Cart</a>
+                <p class="price"><span>15</span>$</p>
+                <div id="pepperoniPizza" title="Pepperoni">
+                    <h3 class="listHeading">Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe1">
+                        <li><strong>Size:</strong>
+                            <select>
+                                <option Value="small">Small</option>
+                                <option Value="medium">Medium</option>
+                                <option Value="large">Large</option>
+                            </select>
+                        </li>
+                        <p><strong>Toppings</strong></p>
+                        <li><input type="checkbox" checked>Sesame Bun</li>
+                        <li><input type="checkbox" checked>Ground Beef Patty</li>
+                        <li><input type="checkbox" checked>Onion</li>
+                        <li><input type="checkbox" checked>Pickle</li>
+                        <li><input type="checkbox" checked>Lettuce Salad</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog1">Total: <span>15</span>$</h4>
+                </div>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="recipe">
+                <p class="name">Mozalera</p>
+                <img src="images/items/p-1.png" width="200" height="200" />
+                <a class="btnStyle3 btnStyle addToCart" id="addToCartMacaroni">Add to Cart</a>
+                <p class="price"><span>15</span>$</p>
+                <div id="MozaleraPizza" title="Mozalera">
+                    <h3 class="listHeading">Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe2">
+                        <li><strong>Size:</strong>
+                            <select>
+                                <option Value="small">Small</option>
+                                <option Value="medium">Medium</option>
+                                <option Value="large">Large</option>
+                            </select>
+                        </li>
+                        <li><input type="checkbox" checked>Macaroni</li>
+                        <li><input type="checkbox" checked>Paprica</li>
+                        <li><input type="checkbox" checked>Tomato</li>
+                        <li><input type="checkbox" checked>Chease</li>
+                        <li><input type="checkbox" checked>Zucchini</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog2">Total: <span>15</span>$</h4>
+                </div>
+            </div>
+
+            <!-- Recipe 3 -->
+            <div class="recipe">
+                <p class="name">Vegetarian</p>
+                <img src="images/items/p-1.png" width="200" height="200" />
+                <a class="btnStyle3 btnStyle addToCart" id="addToCartPizza">Add to Cart</a>
+                <p class="price"><span>18</span>$</p>
+                <div id="vegetarianPizza" title="vegetarian">
+                    <h3 class="listHeading">Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe3">
+                        <li><strong>Size:</strong>
+                            <select>
+                                <option Value="small">Small</option>
+                                <option Value="medium">Medium</option>
+                                <option Value="large">Large</option>
+                            </select>
+                        </li>
+                        <li><input type="checkbox" checked>Tomato Sauce</li>
+                        <li><input type="checkbox" checked>Cheese</li>
+                        <li><input type="checkbox" checked>Peperoni</li>
+                        <li><input type="checkbox" checked>Olives</li>
+                        <li><input type="checkbox" checked>Mushrooms</li>
+                        <li><input type="checkbox" checked>Basil</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog3">Total: <span>15</span>$</h4>
+                </div>
+            </div>
+
+            <!-- Recipe 4 -->
+            <div class="recipe">
+                <p class="name">Gluten-Free</p>
+                <img src="images/items/p-1.png" width="200" height="200" />
+                <a class="btnStyle3 btnStyle addToCart" id="addToCartSalad">Add to Cart</a>
+                <p class="price"><span>9</span>$</p>
+                <div id="glutenPizza" title="Gluten-Free">
+                    <h3 class="listHeading">Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe4">
+                        <li><strong>Size:</strong>
+                            <select>
+                                <option Value="small">Small</option>
+                                <option Value="medium">Medium</option>
+                                <option Value="large">Large</option>
+                            </select>
+                        </li>
+                        <li><input type="checkbox" checked>Tomato</li>
+                        <li><input type="checkbox" checked>Cucumber</li>
+                        <li><input type="checkbox" checked>Cheese</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog4">Total: <span>9</span>$</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="finishOrderDialog" title="Confirm Order">
+        <div id="finalOrderList">
+            <h3>Your Orders:</h3>
+            <ol></ol>
+        </div>
+        <div id="buyerInfo">
+            <input type="text" id="buyerName" placeholder="Enter Name">
+            <input type="text" id="buyerNumber" placeholder="Enter Phone Number">
+            <input type="text" id="buyerAddress" placeholder="Enter Address">
+            <input type="text" id="buyerName" placeholder="Enter Name">
+            <a class="btnStyle order">Order!</a>
+        </div>
+    </div>
+
+    <div id="thanksMessage">
+        <h1>Thank you for the order</h1>
+        <h3>We will have it delivered soon</h3>
+    </div>
+    <!-- </section> -->
+</body>
+</html>

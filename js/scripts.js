@@ -1,60 +1,65 @@
 $(document).ready(function () {
+
+
     $("a").click(function (event) {
         event.preventDefault();
     });
+
     var numOfOrders = 0;
     $(".num").text(numOfOrders);
-    $("#thanksMessage, #checkPizzaOne, #checkOrderMacaroni, #checkOrderPizza, #checkOrderSalad, #checkOrderSpaghetti, #checkOrderRisotto, #finishOrderDialog").hide();
-    $("#addToCartPizzaOne").click(function () {
-        $("#checkPizzaOne").dialog({
+
+    $("#thanksMessage, #pepperoniPizza, #MozaleraPizza, #vegetarianPizza, #glutenPizza, #finishOrderDialog").hide();
+
+    $("#addToPepperoni").click(function () {
+        $("#pepperoniPizza").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
 
-    $("#addToCartMacaroni").on("click", function () {
-        $("#checkOrderMacaroni").dialog({
+    $("#addToCartMacaroni").click(function () {
+        $("#MozaleraPizza").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
 
-    $("#addToCartPizza").on("click", function () {
-        $("#checkOrderPizza").dialog({
+    $("#addToCartPizza").click(function () {
+        $("#vegetarianPizza").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
 
-    $("#addToCartSalad").on("click", function () {
-        $("#checkOrderSalad").dialog({
+    $("#addToCartSalad").click(function () {
+        $("#glutenPizza").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
 
-    $("#addToCartSpaghetti").on("click", function () {
+    $("#addToCartSpaghetti").click(function () {
         $("#checkOrderSpaghetti").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
 
-    $("#addToCartRisotto").on("click", function () {
+    $("#addToCartRisotto").click(function () {
         $("#checkOrderRisotto").dialog({
             hide: "blind",
             show: "blind",
-            width: "500px",
+            width: "600px",
             closeText: "X"
         });
     })
@@ -196,7 +201,7 @@ $(document).ready(function () {
             $("#thanksMessage").dialog({
                 hide: "blind",
                 show: "blind",
-                width: "500px"
+                width: "400px"
             });
             setTimeout(function () {
                 $("#thanksMessage").dialog("close");
@@ -205,6 +210,5 @@ $(document).ready(function () {
             $("#buyerInfo").append('<p>Fill up all the inputs</p>');
         }
     })
-
 
 })

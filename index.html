@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="js/scripts.js"></script>
     <script src="js/jquery-3.5.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
@@ -14,9 +15,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg" id="navMenu">
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="navItem">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">
                         <i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
@@ -37,13 +38,16 @@
         </div>
     </nav>
     <section id="welcomeSec">
-        <h1>Slide Show</h1>
+        <div class="foreColor">
+            <h1 class="animate__animated animate__flip">You Order!!! We deliver</h1>
+        </div>
     </section>
+
     <hr class="newLine">
     <section id="introSec">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 col-md-5 col-lg-5">
+                <div class="col-md-5">
                     <h1>Welcome to GoDelicious</h1>
                     <span id="welcome"
                         style="color: chocolate;font-family: 'Dancing Script',cursive;font-size: 20px;"><em><span
@@ -63,8 +67,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-1 col-md-1 col-lg-1"></div>
-                <div class="col-sm-2 col-md-2 col-lg-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
                     <div class="card imgCard1" style="width: 15rem;">
                         <img class="img-fluid" src="images/backgrounds/promo_img.jpg" class="card-img-top" alt="promo">
                         <div class="card-body card1">
@@ -101,80 +105,85 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card" style="width: 15rem;">
-                            <img src="images/items/product-9.png" class="card-img-top" width="200" height="200">
+                            <img src="images/items/cheese.jpg" class="card-img-top" width="200" height="200">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                ...
+                                <h5 class="card-title">Cheese Pizza</h5>
+                                <p class="card-text">It should be no shocker that a classic is the statistical favorite.
+                                    Cheese pizza is one of the most popular choices. It will always be a simple,
+                                    unadorned masterpiece on its own.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 15rem;">
-                            <img src="images/items/product-10.png" class="card-img-top" width="200" height="200">
+                            <img src="images/items/vegie.jpg" class="card-img-top" width="200" height="200">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                ...
+                                <h5 class="card-title">Veggie Pizza</h5>
+                                <p class="card-text">When you want to jazz up your cheese pizza with color and texture,
+                                    veggies are the perfect topping. And you’re only limited by your imagination.
+                                    Everything from peppers and mushrooms, to eggplant and onions for an exciting
+                                    and tasty veggie pizza.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 15rem;">
-                            <img src="images/items/product-11.png" class="card-img-top" width="200" height="200">
+                            <img src="images/items/pepperoni.jpg" class="card-img-top" width="200" height="200">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                ...
+                                <h5 class="card-title">Pepperoni Pizza</h5>
+                                <p class="card-text">There’s a reason this is one of the most popular types of pizza.
+                                    Who doesn’t love biting into a crispy, salty round of pepperoni?</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 15rem;">
-                            <img src="images/items/product-12.png" class="card-img-top" width="200" height="200">
+                            <img src="images/items/meat.jpg" class="card-img-top" width="200" height="200">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                ...
+                                <h5 class="card-title">Meat Pizza</h5>
+                                <p class="card-text">If pepperoni just isn’t enough, and you’re looking for a pie with a
+                                    bit more heft, a meat pizza is a perfect and popular choice. Pile on ground beef and
+                                    sausage for a hearty meal.</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <a class="menuBtn"href="menu.html">Place Your order</a>
+                <a class="menuBtn" href="menu.html">More>></a><br>
                 <div id="otherMenu">
                     <p>Other specialities</p>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </section>
     <hr class="newLine">
     <section id="reservationSec">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-5">
                     <h1>Book Online</h1>
+                    <p>
+                        Plan in advance and book a table for you, family, and friends
+                        and we'll prepare a place just for you.
+                    </p>
 
                 </div>
+                <div class="col-1"></div>
                 <div class="col-6">
                     <h1>Book a Table</h1>
-                    <form>
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <input type="tel">
-                        <input type="date">
+                    <form id="reservationForm">
+                        <input id="nameInput" type="text" placeholder="Names">
+                        <br>
+                        <input id="phoneInput" type="tel" placeholder="Phone Number">
+                        <br>
+                        <input id="numberInput" type="text" placeholder="Number of People">
+                        <br>
+                        <input id="requireInput" type="text" placeholder="Requirement for your reservation">
+                        <br>
+                        <input id="dateInput" type="date" placeholder="reservation date">
                     </form>
+                    <button class="bookBtn">Book</button>
 
                 </div>
             </div>

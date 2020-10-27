@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="css/menustyle.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="https://use.fontawesome.com/7488f3a572.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -11,17 +12,16 @@
 <body>
     <input type="checkbox" id="cartToggle" name="toggle" />
     <nav class="navbar">
+        <h1 id="logo">Our Pizza Special</h1>
         <div>
-            <label for="cartToggle" class="toggleCart btnStyle btnStyle2"><i class="fa fa-shopping-cart"
+            <label for="cartToggle" class="toggleCart btnStyle btnStyle2"><i class="fa fa-cart-plus"
                     aria-hidden="true"></i>
                 <i class="fa fa-circle" aria-hidden="true"></i>
                 <span class="num"></span>
             </label>
         </div>
-    </nav><!-- End of Navigation -->
-    <!-- <section id="thirdSec"> -->
-    <div class="menu-body">
-        <!-- Cart -->
+    </nav>
+    <div class="body-content">
         <nav class="cart">
             <h3>List of orders: <span>0$</span></h3>
             <ol id="listOfOrders">
@@ -30,57 +30,51 @@
         </nav>
 
         <div class="recipe-menu">
-
-            <!-- Recipe 1 -->
             <div class="recipe">
-                <p class="name">Pepperoni</p>
-                <img src="images/items/p-1.png" width="200" height="200" />
-                <a class="btnStyle3 btnStyle addToCart" id="addToPepperoni">Add to Cart</a>
-                <p class="price"><span>15</span>$</p>
-                <div id="pepperoniPizza" title="Pepperoni">
-                    <h3 class="listHeading">Ingredients:</h3>
-                    <ul class="listOfIngredients" id="recipe1">
-                        <li><strong>Size:</strong>
-                            <select>
-                                <option Value="small">Small</option>
-                                <option Value="medium">Medium</option>
-                                <option Value="large">Large</option>
-                            </select>
-                        </li>
-                        <p><strong>Toppings</strong></p>
-                        <li><input type="checkbox" checked>Sesame Bun</li>
-                        <li><input type="checkbox" checked>Ground Beef Patty</li>
-                        <li><input type="checkbox" checked>Onion</li>
-                        <li><input type="checkbox" checked>Pickle</li>
-                        <li><input type="checkbox" checked>Lettuce Salad</li>
-                    </ul>
-                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                <p class="name">Cheese Pizza</p>
+                <img src="images/items/cheese.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza1">Add to Cart</a>
+                <p class="details">
+                    It should be no shocker that a classic is the statistical favorite.
+                    Cheese pizza is one of the most popular choices.
+                    It will always be a simple, unadorned masterpiece on its own.
+                </p>
+                <p class="price"><span>17.80 – $22.90</span>$</p>
+                <div id="checkOrderPizza1" title="Cheese Pizza">
+                    <h3 class="listHeading">Ingredients</h3>
+                        <p>mozzarella (accounting for about 30%)<br>
+                        provolone<br></p>
+                        <h3 class="listHeading">List of Toppings</h3>
+                        <ul class="listOfIngredients" id="recipe1">
+                            <li><input type="checkbox" checked>cheddar</li>
+                            <li><input type="checkbox" checked>Parmesan</li>
+                            <li><input type="checkbox" checked>Emmental</li>
+                            <li><input type="checkbox" checked>Romano</li>
+                            <li><input type="checkbox" checked>ricotta</li>
+                        </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Topping</a>
                     <a class="btnStyle listOver">Done</a>
                     <h4 class="totalDialog" id="totalDialog1">Total: <span>15</span>$</h4>
                 </div>
             </div>
 
-            <!-- Recipe 2 -->
             <div class="recipe">
-                <p class="name">Mozalera</p>
-                <img src="images/items/p-1.png" width="200" height="200" />
-                <a class="btnStyle3 btnStyle addToCart" id="addToCartMacaroni">Add to Cart</a>
-                <p class="price"><span>15</span>$</p>
-                <div id="MozaleraPizza" title="Mozalera">
-                    <h3 class="listHeading">Ingredients:</h3>
+                <p class="name">Veggie Pizza</p>
+                <img src="images/items/vegie.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza2">Add to Cart</a>
+                <p class="details">
+                    you’re only limited by your imagination. Everything from peppers and mushrooms,
+                    to eggplant and onions for an exciting and tasty veggie pizza.
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza2" title="Macaroni">
+                    <h3 class="listHeading">List of Toppings</h3>
                     <ul class="listOfIngredients" id="recipe2">
-                        <li><strong>Size:</strong>
-                            <select>
-                                <option Value="small">Small</option>
-                                <option Value="medium">Medium</option>
-                                <option Value="large">Large</option>
-                            </select>
-                        </li>
-                        <li><input type="checkbox" checked>Macaroni</li>
-                        <li><input type="checkbox" checked>Paprica</li>
-                        <li><input type="checkbox" checked>Tomato</li>
-                        <li><input type="checkbox" checked>Chease</li>
-                        <li><input type="checkbox" checked>Zucchini</li>
+                        <li><input type="checkbox" checked>Eggplant</li>
+                        <li><input type="checkbox" checked>Zuchinni</li>
+                        <li><input type="checkbox" checked>Squash Slices</li>
+                        <li><input type="checkbox" checked>Onions</li>
+                        <li><input type="checkbox" checked>Bell Pepper</li>
                     </ul>
                     <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
                     <a class="btnStyle listOver">Done</a>
@@ -88,22 +82,17 @@
                 </div>
             </div>
 
-            <!-- Recipe 3 -->
             <div class="recipe">
-                <p class="name">Vegetarian</p>
-                <img src="images/items/p-1.png" width="200" height="200" />
-                <a class="btnStyle3 btnStyle addToCart" id="addToCartPizza">Add to Cart</a>
-                <p class="price"><span>18</span>$</p>
-                <div id="vegetarianPizza" title="vegetarian">
-                    <h3 class="listHeading">Ingredients:</h3>
+                <p class="name">Pepperoni Pizza</p>
+                <img src="images/items/pepperoni.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza3">Add to Cart</a>
+                <p class="details">
+                    Who doesn’t love biting into a crispy, salty round of pepperoni?
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza3" title="Pizza">
+                    <h3 class="listHeading">List of Ingredients:</h3>
                     <ul class="listOfIngredients" id="recipe3">
-                        <li><strong>Size:</strong>
-                            <select>
-                                <option Value="small">Small</option>
-                                <option Value="medium">Medium</option>
-                                <option Value="large">Large</option>
-                            </select>
-                        </li>
                         <li><input type="checkbox" checked>Tomato Sauce</li>
                         <li><input type="checkbox" checked>Cheese</li>
                         <li><input type="checkbox" checked>Peperoni</li>
@@ -117,22 +106,18 @@
                 </div>
             </div>
 
-            <!-- Recipe 4 -->
             <div class="recipe">
-                <p class="name">Gluten-Free</p>
-                <img src="images/items/p-1.png" width="200" height="200" />
-                <a class="btnStyle3 btnStyle addToCart" id="addToCartSalad">Add to Cart</a>
-                <p class="price"><span>9</span>$</p>
-                <div id="glutenPizza" title="Gluten-Free">
-                    <h3 class="listHeading">Ingredients:</h3>
+                <p class="name">Meat Pizza</p>
+                <img src="images/items/meat.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza4">Add to Cart</a>
+                <p class="details">
+                    Pile on ground beef and sausage for a hearty meal.
+
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza4" title="Salad">
+                    <h3 class="listHeading">List of Ingredients:</h3>
                     <ul class="listOfIngredients" id="recipe4">
-                        <li><strong>Size:</strong>
-                            <select>
-                                <option Value="small">Small</option>
-                                <option Value="medium">Medium</option>
-                                <option Value="large">Large</option>
-                            </select>
-                        </li>
                         <li><input type="checkbox" checked>Tomato</li>
                         <li><input type="checkbox" checked>Cucumber</li>
                         <li><input type="checkbox" checked>Cheese</li>
@@ -142,6 +127,99 @@
                     <h4 class="totalDialog" id="totalDialog4">Total: <span>9</span>$</h4>
                 </div>
             </div>
+
+            <div class="recipe">
+                <p class="name">Margherita Pizza</p>
+                <img src="images/items/Margherita.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza5">Add to Cart</a>
+                <p class="details">
+                    There’s a reason it’s an Italian staple and one of the most popular types of pizza.
+
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza5" title="Spaghetti">
+                    <h3 class="listHeading">List of Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe5">
+                        <li><input type="checkbox" checked>Spaghetti</li>
+                        <li><input type="checkbox" checked>Tomato Sauce</li>
+                        <li><input type="checkbox" checked>Ground Beef</li>
+                        <li><input type="checkbox" checked>Onion</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog5">Total: <span>12</span>$</h4>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <p class="name">Chicken Pizza</p>
+                <img src="images/items/Chicken .jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza6">Add to Cart</a>
+                <p class="details">
+                    he chicken slathered over the top of a pie gives it a tangy, sweet flavor that can’t be beaten.
+
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza6" title="Risotto">
+                    <h3 class="listHeading">List of Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe6">
+                        <li><input type="checkbox" checked>Risotto Rice</li>
+                        <li><input type="checkbox" checked>Chicken Stock</li>
+                        <li><input type="checkbox" checked>Onion</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog6">Total: <span>9</span>$</h4>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <p class="name">Hawaiian Pizza</p>
+                <img src="images/items/Hawaiian.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza7">Add to Cart</a>
+                <p class="details">
+                    Pineapple might not be the first thing that comes to mind when you think pizza.
+                    But add in some ham and it creates an unexpectedly solid sweet and salty combination for this type
+                    of pizza.
+
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza7" title="Risotto">
+                    <h3 class="listHeading">List of Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe7">
+                        <li><input type="checkbox" checked>Risotto Rice</li>
+                        <li><input type="checkbox" checked>Chicken Stock</li>
+                        <li><input type="checkbox" checked>Onion</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog7">Total: <span>9</span>$</h4>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <p class="name">Supreme Pizza</p>
+                <img src="images/items/Supreme.jpg" width="300" height="300">
+                <a class="btnStyle3 btnStyle addToCart" id="addToPizza8">Add to Cart</a>
+                <p class="details">
+                    When you can’t decide which toppings to get, it’s time for the supreme pizza,<br>
+                    Where you can add anything that pleases your tasting and liking in a pizza...
+
+                </p>
+                <p class="price"><span>22.00 – 27.00</span>$</p>
+                <div id="checkOrderPizza8" title="Risotto">
+                    <h3 class="listHeading">List of Ingredients:</h3>
+                    <ul class="listOfIngredients" id="recipe8">
+                        <li><input type="checkbox" checked>Risotto Rice</li>
+                        <li><input type="checkbox" checked>Chicken Stock</li>
+                        <li><input type="checkbox" checked>Onion</li>
+                    </ul>
+                    <a class="btnStyle3 btnStyle addIngredient">Add Ingredient</a>
+                    <a class="btnStyle listOver">Done</a>
+                    <h4 class="totalDialog" id="totalDialog8">Total: <span>9</span>$</h4>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -154,7 +232,6 @@
             <input type="text" id="buyerName" placeholder="Enter Name">
             <input type="text" id="buyerNumber" placeholder="Enter Phone Number">
             <input type="text" id="buyerAddress" placeholder="Enter Address">
-            <input type="text" id="buyerName" placeholder="Enter Name">
             <a class="btnStyle order">Order!</a>
         </div>
     </div>
@@ -163,6 +240,7 @@
         <h1>Thank you for the order</h1>
         <h3>We will have it delivered soon</h3>
     </div>
-    <!-- </section> -->
+
 </body>
+
 </html>

@@ -8,58 +8,73 @@ $(document).ready(function () {
     var numOfOrders = 0;
     $(".num").text(numOfOrders);
 
-    $("#thanksMessage, #pepperoniPizza, #MozaleraPizza, #vegetarianPizza, #glutenPizza, #finishOrderDialog").hide();
-
-    $("#addToPepperoni").click(function () {
-        $("#pepperoniPizza").dialog({
+    $("#thanksMessage, #checkOrderPizza1, #checkOrderPizza2, #checkOrderPizza3, #checkOrderPizza4, #checkOrderPizza5, #checkOrderPizza6,#checkOrderPizza7,#checkOrderPizza8, #finishOrderDialog").hide();
+    $("#addToPizza1").click(function () {
+        $("#checkOrderPizza1").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
             closeText: "X"
         });
     })
 
-    $("#addToCartMacaroni").click(function () {
-        $("#MozaleraPizza").dialog({
+    $("#addToPizza2").click(function () {
+        $("#checkOrderPizza2").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
             closeText: "X"
         });
     })
 
-    $("#addToCartPizza").click(function () {
-        $("#vegetarianPizza").dialog({
+    $("#addToPizza3").click(function () {
+        $("#checkOrderPizza3").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
             closeText: "X"
         });
     })
 
-    $("#addToCartSalad").click(function () {
-        $("#glutenPizza").dialog({
+    $("#addToPizza4").click(function () {
+        $("#checkOrderPizza4").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
             closeText: "X"
         });
     })
 
-    $("#addToCartSpaghetti").click(function () {
-        $("#checkOrderSpaghetti").dialog({
+    $("#addToPizza5").click(function () {
+        $("#checkOrderPizza5").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
             closeText: "X"
         });
     })
 
-    $("#addToCartRisotto").click(function () {
-        $("#checkOrderRisotto").dialog({
+    $("#addToPizza6").click(function () {
+        $("#checkOrderPizza6").dialog({
             hide: "blind",
             show: "blind",
-            width: "600px",
+            width: "400px",
+            closeText: "X"
+        });
+    })
+    $("#addToPizza7").click(function () {
+        $("#checkOrderPizza7").dialog({
+            hide: "blind",
+            show: "blind",
+            width: "400px",
+            closeText: "X"
+        });
+    })
+    $("#addToPizza8").click(function () {
+        $("#checkOrderPizza8").dialog({
+            hide: "blind",
+            show: "blind",
+            width: "400px",
             closeText: "X"
         });
     })
@@ -87,12 +102,13 @@ $(document).ready(function () {
     $('#recipe1').children('li').click(checkboxChange(1));
     $('#recipe2').children('li').click(checkboxChange(2));
     $('#recipe3').children('li').click(checkboxChange(3));
-    $('#recipe3').children('li').click(checkboxChange(4));
-    $('#recipe3').children('li').click(checkboxChange(5));
-    $('#recipe3').children('li').click(checkboxChange(6));
+    $('#recipe4').children('li').click(checkboxChange(4));
+    $('#recipe5').children('li').click(checkboxChange(5));
+    $('#recipe6').children('li').click(checkboxChange(6));
+    $('#recipe7').children('li').click(checkboxChange(7));
+    $('#recipe8').children('li').click(checkboxChange(8));
 
-    $(".addIngredient").on("click", function () {
-        // Creates input field and two buttons for adding an ingrediant that's not on the list
+    $(".addIngredient").click(function () {
         var inputIng = '<input type="text" id="newIngredient">';
         var confirmInput = '<a class="btnStyle3 btnStyle confirmInput">&#10004;</a>';
         var cancelInput = '<a class="btnStyle3 btnStyle cancelInput">&#10008;</a>';
@@ -101,10 +117,8 @@ $(document).ready(function () {
         $("#newIngredient").focus();
         $("#newIngredient").attr("placeholder", "separate ingredients with a comma");
 
-        // Confirm button adds the new ingrediant to the list of ingrediants
-        $(".addIngredientWrap > .confirmInput").on("click", function () {
+        $(".addIngredientWrap > .confirmInput").click(function () {
             if ($("#newIngredient").val() != "") {
-                //split takes the value of the input and splits it into separate array elements after every comma
                 var newIngredient = ($(".addIngredientWrap input").val()).split(",");
                 var newCheckbox = '<input type="checkbox" checked>';
 
@@ -116,22 +130,22 @@ $(document).ready(function () {
                 $('#recipe1').children('li').click(checkboxChange(1));
                 $('#recipe2').children('li').click(checkboxChange(2));
                 $('#recipe3').children('li').click(checkboxChange(3));
-                $('#recipe3').children('li').click(checkboxChange(4));
-                $('#recipe3').children('li').click(checkboxChange(5));
-                $('#recipe3').children('li').click(checkboxChange(6));
+                $('#recipe4').children('li').click(checkboxChange(4));
+                $('#recipe5').children('li').click(checkboxChange(5));
+                $('#recipe6').children('li').click(checkboxChange(6));
+                $('#recipe7').children('li').click(checkboxChange(7));
+                $('#recipe8').children('li').click(checkboxChange(8));
 
                 $(this).parent().remove();
             } else {
                 $("#newIngredient").attr("placeholder", "Please add ingrediant");
             }
         });
-        // Remove button hides the input
-        $(".addIngredientWrap > .cancelInput").on("click", function () {
+        $(".addIngredientWrap > .cancelInput").click(function () {
             $(this).parent().remove();
         })
-    }) // add ingredient button
-
-    $(".listOver").on("click", function () {
+    })
+    $(".listOver").click(function () {
         var orderName = '<h3 class="orderName"><span>' + $(this).parent().siblings(".ui-dialog-titlebar").children("span").text() + '</span><a class="delBtn">&#10008;</a>' + '</h3>';
         var orderIngredients = '<ul class="orderIngredients"></ul>';
         var orderPrice = '<h3 class="orderPrice"><span>' + $(this).parent().children(".totalDialog").children("span").text() + '</span>$<h3>'
@@ -143,7 +157,6 @@ $(document).ready(function () {
             $(".orderIngredients").last().append("<li>" + selectedIngredient + "</li>");
         })
 
-        // opens the cart side menu
         if ($('#cartToggle').prop('checked')) {
             $("#cartToggle").prop("checked", true);
         } else {
@@ -154,8 +167,6 @@ $(document).ready(function () {
 
         numOfOrders = $("#listOfOrders").children().length;
         $(".num").text(numOfOrders);
-
-        // display total price in cart orders
         var totalOrderPrice = 0;
         $("#listOfOrders").children("li").children(".orderPrice").children("span").each(function () {
             var price = parseFloat($(this).text());
@@ -163,8 +174,7 @@ $(document).ready(function () {
             $(".cart > h3 > span").text(totalOrderPrice + "$");
         });
 
-        // remove order from cart
-        $(".delBtn").on("click", function () {
+        $(".delBtn").click(function () {
             var removePrice = $(this).parent().parent().children(".orderPrice").children("span").text();
             totalOrderPrice -= removePrice;
             $(".cart > h3 > span").text(totalOrderPrice + "$");
@@ -173,9 +183,8 @@ $(document).ready(function () {
             numOfOrders = $("#listOfOrders").children().length;
             $(".num").text(numOfOrders);
         })
-    }); // List over (done button)
-
-    $(".finishOrder").on("click", function () {
+    }); 
+    $(".finishOrder").click(function () {
         $("#finalOrderList > ol").children().remove();
         $(".orderName").children("span").each(function () {
             var finalOrder = '<li>' + $(this).text() + '</li>';
@@ -190,7 +199,7 @@ $(document).ready(function () {
         });
     })
 
-    $(".order").on("click", function () {
+    $(".order").click(function () {
         var name = $("#buyerName").val();
         var number = $("#buyerNumber").val();
         var address = $("#buyerAddress").val();

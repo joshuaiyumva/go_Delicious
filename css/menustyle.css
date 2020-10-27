@@ -1,0 +1,379 @@
+::-webkit-scrollbar {
+    z-index: 100;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e6dfe2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff1a1a;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    outline-color: #ff3333;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #ff3333;
+    border-radius: 0px;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.btnStyle {
+    background-color: #ff3333;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 7px 10px;
+    letter-spacing: .1em;
+    border-radius: 3px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btnStyle:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
+    transform: scale(1.05, 1.05);
+}
+
+.btnStyle2 {
+    background-color: #ffffff;
+    color: #ff3333;
+}
+
+.btnStyle2:hover {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #ff1a1a;
+    color: #ff1a1a;
+}
+
+.btnStyle3 {
+    background-color: #ff3333;
+}
+
+.btnStyle3:hover {
+    background-color: #0e0d0dbd;
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: #ffffff;
+    color: #fff8f8;
+}
+
+.toggleCart {
+    position: relative;
+}
+
+.fa-circle {
+    font-size: 21px !important;
+    color: #3abbf7;
+}
+
+.num {
+    font-size: 12px;
+    padding: 3px 6px;
+    color: #fff;
+}
+
+.num,
+.fa-circle {
+    position: absolute;
+    right: -9px;
+    top: -9px;
+}
+
+.cart {
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    bottom: 0px;
+    right: -300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    z-index: 1;
+    background-color: #ffb3b3;
+    padding: 30px;
+    box-shadow: 2px 0 20px 5px rgba(0, 0, 0, 0.24);
+
+    transition: all 0.25s ease-in-out;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#cartToggle {
+    display: none;
+}
+
+#cartToggle:checked~div.body-content>.cart {
+    right: 0px;
+}
+
+#cartToggle:checked~div.body-content {
+    right: 100px;
+}
+
+#cartToggle:checked~div.body-content>.cart>a.finishOrder {
+    right: 5px;
+}
+
+.body-content {
+    position: relative;
+    right: 0px;
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+
+    transition: all .2s ease-in-out;
+}
+
+.recipe-menu {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.recipe {
+    padding: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.recipe img {
+    width: 95%;
+    height: 70%;
+    align-content: center;
+    border-radius: 50%;
+    margin: 10px 10px 10px 10px;
+}
+
+.name {
+    font-size: 23px;
+    text-align: center;
+}
+.details{
+    text-align: center;
+}
+.price {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 0px 15px;
+    color:#990000;
+    text-align: center;
+}
+
+.recipe:hover>.addToCart {
+    opacity: 1;
+}
+
+.addToCart {
+    opacity: 0;
+    position: absolute;
+    top: 70%;
+    left: 28%;
+    transition: all .2s ease-in-out;
+}
+
+.checkOrder {
+    padding: 50px;
+}
+
+.checkOrder {
+    padding: 29px 50px !important;
+}
+
+.listHeading {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.listOfIngredients {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.listOfIngredients input {
+    margin: 0px 5px;
+}
+
+.addIngredientWrap {
+    display: flex;
+    margin: 5px 0;
+}
+
+.addIngredientWrap input {
+    width: 60%;
+}
+
+.addIngredientWrap a {
+    padding: 2px 6px;
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+.cancelInput {
+    background-color: #ff3333;
+}
+
+.orderName {
+    padding: 13px 0px 8px 0px;
+}
+
+.orderPrice {
+    float: right;
+}
+
+hr {
+    margin: 25px 0 5px 0;
+}
+
+.delBtn {
+    float: right;
+    color: #000;
+    cursor: pointer;
+}
+.delBtn:hover{
+    color: #990000;
+}
+
+.totalDialog {
+    display: inline-block;
+    float: right;
+}
+
+.cart>h2>span {
+    margin-left: 15px
+}
+
+.finishOrder {
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    right: -265px;
+    z-index: 2;
+    padding: 6px 28px;
+    border-radius: 0;
+    text-align: center;
+}
+
+#finishOrderDialog {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#finalOrderList {
+    width: 40%;
+}
+
+#finalOrderList h3 {
+    text-align: center;
+}
+
+#finalOrderList ol {
+    margin: 10px 15px;
+    font-size: 15px;
+}
+
+#buyerInfo {
+    width: 60%;
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#buyerInfo input {
+    margin: 5px 0;
+    padding: 3px;
+    width: 90%;
+}
+
+#buyerInfo .order {
+    display: block;
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#buyerInfo input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+#thanksMessage {
+    padding: 20px;
+}
+
+.ui-dialog {
+    z-index: 2;
+    box-shadow: 2px 0 20px 5px rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    padding: 30px;
+}
+
+.ui-draggable-handle {
+    position: absolute;
+    background-color: #ffb3b3;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 999;
+}
+
+.ui-button {
+    background-color: #ff3333;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 5px;
+    float: right;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.ui-button:hover {
+    background-color: #ff4d4d;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
+    transform: scale(1.05, 1.05);
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
+p{
+    font-family: 'Source Serif Pro',
+    serif;
+}

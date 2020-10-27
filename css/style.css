@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
-html{
+html {
     background-color: #ffffff;
 }
+
 html,
 p {
     font-family: 'Source Serif Pro',
@@ -20,7 +21,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #ff1a1a;
 }
 
 ::-webkit-scrollbar-button {
@@ -31,14 +32,20 @@ p {
     background-color: #000;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-
+nav#navMenu {
+    background-color: #ff1a1a;
 }
 
-input {
-    outline-color: #ff2f00;
+nav#navMenu:hover {
+    background-color: #ff4d4d;
+}
+
+nav ul#navItem li.nav-item .nav-link {
+    color: #000000;
+}
+
+nav ul#navItem li.nav-item .nav-link:hover {
+    color: #ffffff;
 }
 
 .navbar {
@@ -62,317 +69,25 @@ section {
     background-color: rgba(0, 0, 0, 0.24);
 }
 
-.btnStyle {
-    background-color: #f83d13;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    padding: 7px 10px;
-    letter-spacing: .1em;
-    border-radius: 3px;
-    z-index: 1;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+section#welcomeSec {
+    margin-top: 0;
+    padding-top: 0;
+    background-size: cover;
+    background-image: url(../images/backgrounds/Fast_food_Pizza_437953.jpg);
 }
 
-.btnStyle:hover {
-    background-color: #eed64d;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
-    transform: scale(1.05, 1.05);
-}
-
-#pepperoniPizza {
-    background-color: rgb(255, 187, 187);
-}
-
-.btnStyle3 {
+.foreColor {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-.btnStyle3:hover {
-    background-color: #f05348;
-    color: #000;
-}
-
-.toggleCart {
-    position: relative;
-}
-
-.fa-circle {
-    font-size: 21px !important;
-    color: #000000;
-}
-
-.num {
-    font-size: 12px;
-    padding: 3px 6px;
-    color: #fff;
-}
-
-.num,
-.fa-circle {
-    position: absolute;
-    right: -9px;
-    top: -9px;
-}
-
-.cart {
-    width: 200px;
-    height: 400px;
-    position: fixed;
-    top: 60px;
-    bottom: 0px;
-    right: -300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    z-index: 1;
-    background-color: #f19393;
-    padding: 30px;
-    box-shadow: 2px 0 20px 5px rgba(0, 0, 0, 0.24);
-    transition: all 0.25s ease-in-out;
-}
-
-.cart h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#cartToggle {
-    display: none;
-}
-
-#cartToggle:checked~div.menu-body>.cart {
-    right: 0px;
-}
-
-#cartToggle:checked~div.menu-body {
-    right: 100px;
-}
-
-#cartToggle:checked~div.menu-body>.cart>a.finishOrder {
-    right: 5px;
-}
-
-.menu-body {
-    position: relative;
-    right: 0px;
-    width: 80%;
-    margin: 0px auto;
-    display: flex;
-    justify-content: space-around;
-    transition: all .2s ease-in-out;
-}
-
-.recipe-menu {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.recipe {
-    background-color: #ffffff;
-    background-size: 100% 100%;
-    padding: 10px;
-    margin-bottom: 40px;
-    width: 300px;
-    height: 300px;
-    position: relative;
-}
-
-.recipe img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
-.name {
-    font-size: 23px;
+.foreColor h1 {
     text-align: center;
+    color: #ffffff;
+    padding-top: 400px;
 }
 
-.price {
-    font-weight: bold;
-    font-size: 22px;
-    padding: 0px 15px;
-    text-align: center;
-}
-
-.recipe:hover>.addToCart {
-    opacity: 1;
-}
-
-.addToCart {
-    opacity: 0;
-    position: absolute;
-    top: 70%;
-    left: 28%;
-    transition: all .2s ease-in-out;
-}
-
-.checkOrder {
-    padding: 50px;
-}
-
-.checkOrder {
-    padding: 29px 50px !important;
-}
-
-.listHeading {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.listOfIngredients {
-    list-style: none;
-    margin-bottom: 15px;
-}
-
-.listOfIngredients input {
-    margin: 0px 5px;
-}
-
-.addIngredientWrap {
-    display: flex;
-    margin: 5px 0;
-}
-
-.addIngredientWrap input {
-    width: 60%;
-}
-
-.addIngredientWrap a {
-    padding: 2px 6px;
-    margin: 0 5px;
-    font-size: 15px;
-}
-
-.cancelInput {
-    background-color: #c90404;
-}
-
-.orderName {
-    padding: 13px 0px 8px 0px;
-}
-
-.orderPrice {
-    float: right;
-}
-
-hr {
-    margin: 25px 0 5px 0;
-}
-
-.delBtn {
-    float: right;
-    color: #f1ac0a;
-    cursor: pointer;
-}
-
-.totalDialog {
-    display: inline-block;
-
-}
-
-.cart>h2>span {
-    margin-left: 15px
-}
-
-.finishOrder {
-    width: 200px;
-    position: fixed;
-    bottom: 0;
-    right: -265px;
-    z-index: 2;
-    padding: 6px 28px;
-    border-radius: 0;
-    text-align: center;
-}
-
-#finishOrderDialog {
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-}
-
-#finalOrderList {
-    width: 40%;
-}
-
-#finalOrderList h3 {
-    text-align: center;
-}
-
-#finalOrderList ol {
-    margin: 10px 15px;
-}
-
-#buyerInfo {
-    width: 60%;
-    margin: 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#buyerInfo input {
-    margin: 5px 0;
-    padding: 3px;
-    width: 90%;
-}
-
-#buyerInfo .order {
-    display: block;
-    width: 50%;
-    margin-top: 10px;
-    text-align: center;
-}
-
-#buyerInfo input::-webkit-input-placeholder {
-    text-align: center;
-}
-
-#thanksMessage {
-    padding: 20px;
-}
-
-/* Dialog Style */
-.ui-dialog {
-    z-index: 2;
-    box-shadow: 2px 0 20px 5px rgba(0, 0, 0, 0.24);
-    background-color: #fff;
-    padding: 30px;
-}
-
-.ui-draggable-handle {
-    position: absolute;
-    background-color: #A7D2CB;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    z-index: 999;
-}
-
-.ui-button {
-    background-color: #f12d2d;
-    border: none;
-    border-radius: 3px;
-    padding: 3px 5px;
-    float: right;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-.ui-button:hover {
-    background-color: #ff6744;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16), 0px 6px 10px rgba(0, 0, 0, .23);
-    transform: scale(1.05, 1.05);
-}
-
-section#welcomeSec,
 #menuSec,
 #introSec,
 #aboutUsSec,
@@ -384,13 +99,24 @@ section#welcomeSec,
     background-color: #ffffff;
 }
 
-section#welcomeSec {
+section#footerSec {
+    background-image: url(../images/backgrounds/pan-pizza-wallpaper-2560x1600-3212_7.jpg);
+    background-position: center center center center;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bgChange 30s linear infinite 0s;
+    animation-timing-function: ease-in-out;
     width: 100%;
+    height: max-content;
+    display: block;
+    margin-bottom: 20px;
+
 }
 
 #menuSec {
     width: 100%;
-    
+
 }
 
 #aboutUsSec {
@@ -426,21 +152,42 @@ h2 {
     font-family: 'Lemonada',
         cursive;
 }
-.card1{
+
+.row .col-md-5 .card {
+    background-color: transparent;
+    border-style: none;
+    border-top-left-radius: 20px;
+
+}
+
+.row .col-md-2 .card {
+    background-color: transparent;
+    border-style: none;
+    border-top-right-radius: 20px;
+
+}
+
+.card1 {
     background-color: #ff1a1a;
 }
-.card2{
-    background-color:#ffd11a;
+
+.card2 {
+    background-color: #ffd11a;
 }
+
 .row .col-md-3 .card {
     background-color: transparent;
     border-style: none;
+    border-top-left-radius: 20px;
 }
 
 .row .col-md-3 .card img {
     margin-left: 20px;
+    border-radius: 50%;
+    border: double;
 
 }
+
 input#nameTxt {
     width: 420px;
     padding-left: 5px;
@@ -490,7 +237,59 @@ textarea#messageTxt {
     border-radius: 10px;
 
 }
-#menuBtn{
+
+a.menuBtn,
+.bookBtn {
     background-color: #ff1a1a;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
     color: #ffffff;
+    text-decoration: none;
+}
+
+a.menuBtn:hover,
+.bookBtn:hover {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #ff1a1a;
+    color: #ff1a1a;
+    text-decoration: none;
+}
+
+#nameInput,
+#numberInput,
+#requireInput,
+#phoneInput,
+#dateInput {
+    width: 500px;
+    height: 70px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+
+}
+
+@keyframes bgChange {
+    0% {
+        background-image: url(../images/backgrounds/pan-pizza-wallpaper-2560x1600-3212_7.jpg);
+    }
+
+    20% {
+        background-image: url(../images/backgrounds/pizza.jpg);
+    }
+
+    40% {
+        background-image: url(../images/backgrounds/pizza1.jpg);
+    }
+
+    60% {
+        background-image: url(../images/backgrounds/pizza2.jpg);
+    }
+
+    80% {
+        background-image: url(../images/backgrounds/pizza3.jpg);
+    }
+
+    100% {
+        background-image: url(../images/backgrounds/pizza_cheese_piece_tomatoes_paprika_olives_corn_fennel_43787_1920x1080.jpg);
+    }
 }
